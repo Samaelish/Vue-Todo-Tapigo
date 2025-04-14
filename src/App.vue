@@ -1,17 +1,21 @@
 <template>
   <!-- Основной контейнер приложения -->
-  <div class="app">
+  <div class="max-w-[600px] mx-auto my-5 p-5">
     <!-- Заголовок приложения -->
-    <h1>Список задач</h1>
+    <h1 class="text-2xl font-bold mb-4 text-gray-800">Список задач</h1>
 
     <!-- Цикл для отрисовки задач -->
-    <div v-for="task in tasks" :key="task.id" class="task-item">
+    <div v-for="task in tasks" :key="task.id" class="py-2.5 border-b border-gray-200">
       <!-- Элемент label для чекбокса -->
-      <label>
+      <label class="flex items-center space-x-3 cursor-pointer">
         <!-- Чекбокс для отметки выполнения -->
-        <input type="checkbox" v-model="task.done" @change="saveTasks">
+        <input type="checkbox" v-model="task.done" @change="saveTasks"
+          class="w-5 h-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500 transform scale-125">
         <!-- Текст задачи с условным стилем -->
-        <span :class="{ completed: task.done }">
+        <span :class="{
+          'text-gray-400 line-through': task.done,
+          'text-gray-700': !task.done
+        }" class="text-lg transition-all duration-200">
           {{ task.title }}
         </span>
       </label>
