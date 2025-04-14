@@ -2,6 +2,8 @@
 
 ![App Pic](public/readmeImg.jpg)
 
+# [Смотреть демо](https://vue-todo-tapigo.vercel.app/)
+
 ## 📌 Цель
 
 Создать небольшое SPA-приложение на **Vue**, которое:
