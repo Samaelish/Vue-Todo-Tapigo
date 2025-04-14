@@ -57,38 +57,3 @@ export default {
   }
 }
 </script>
-
-<style>
-/* Основные стили контейнера */
-.app {
-  max-width: 600px;
-  margin: 20px auto;
-  /* Центрирование по горизонтали */
-  padding: 20px;
-}
-
-/* Стили элемента задачи */
-.task-item {
-  padding: 10px;
-  border-bottom: 1px solid #eee;
-  /* Разделитель между задачами */
-}
-
-/* Стиль для выполненной задачи */
-.completed {
-  text-decoration: line-through;
-  /* Перечеркнутый текст */
-  color: #888;
-  /* Серый цвет для выполненного */
-}
-
-/* Стилизация чекбокса */
-input[type="checkbox"] {
-  margin-right: 10px;
-  /* Отступ от текста */
-  transform: scale(1.2);
-  /* Увеличение размера */
-  cursor: pointer;
-  /* Курсор-указатель */
-}
-</style>
